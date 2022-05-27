@@ -1,0 +1,68 @@
+{
+  "name": "assetbase",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "stagebuild": "vue-cli-service build --mode staging",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.0",
+    "axios": "^0.19.2",
+    "babel-runtime": "^6.26.0",
+    "clipboard": "^2.0.6",
+    "core-js": "^3.6.5",
+    "date-fns": "^2.14.0",
+    "enquire.js": "^2.1.6",
+    "highlight.js": "^10.2.1",
+    "js-cookie": "^2.2.1",
+    "lodash.clonedeep": "^4.5.0",
+    "mockjs": "^1.1.0",
+    "nprogress": "^0.2.0",
+    "viser-vue": "^2.4.8",
+    "vue": "^2.6.11",
+    "vue-i18n": "^8.18.2",
+    "vue-router": "^3.2.0",
+    "vuedraggable": "^2.23.2",
+    "vuetify": "^2.6.0",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.13",
+    "@vue/cli-plugin-eslint": "~4.5.13",
+    "@vue/cli-plugin-router": "^4.5.17",
+    "@vue/cli-plugin-vuex": "^4.5.17",
+    "@vue/cli-service": "~4.5.13",
+    "axios": "^0.18.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "sass": "~1.32.0",
+    "sass-loader": "^10.0.0",
+    "vue-cli-plugin-axios": "0.0.4",
+    "vue-cli-plugin-vuetify": "~2.5.0",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify-loader": "^1.7.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
