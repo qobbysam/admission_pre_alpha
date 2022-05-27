@@ -48,6 +48,8 @@ Production build
 
 ```
 
+### Django commands
+
 ```
     python admissiontool/manage.py migrate
 
