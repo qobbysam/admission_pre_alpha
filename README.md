@@ -1,24 +1,63 @@
-# assetbase
+# admisioon tool pre_alpha
 
 ## Project setup
+
+Require Python3  pre installed
+Require Node JS pre installed
+
+Clone repository
+
+
+## Assets setup
+
+### Build New Assets
+
 ```
-npm install
+   cd admissiontool/admissiontool/assets
+```
+```
+   npm install
 ```
 
-### Compiles and hot-reloads for development
+Development build
 ```
-npm run serve
+    npm run stagebuild
+```
+Production build
+```
+    npm run build
+```
+### PipEnv
+    pipenv install 
+```
+    pipenv install
 ```
 
-### Compiles and minifies for production
+## Django server
+
+### Activate Env
 ```
-npm run build
+    pipenv shell
+
 ```
 
-### Lints and fixes files
+### Virtualenv
+
 ```
-npm run lint
+    pip install requirements -r re.txt
+
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```
+    python admissiontool/manage.py migrate
+
+```
+
+```
+    python admissiontool/manage.py createsuperuser
+```
+
+```
+    python admissiontool/manage.py runserver
+```
+
