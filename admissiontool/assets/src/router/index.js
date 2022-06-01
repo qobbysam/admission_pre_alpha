@@ -81,26 +81,22 @@ const loginIgnore = {
 const Loc_options = {
 
   routes : [
-    {
-      path : '/exception',
-      name: 'exception',
-      meta: {
-        icon: 'warning'
-      },
-      component: ()=> import('../components/layout/basepage.vue'),
-      children: [
-        {
-          path: '/exception/403',
-          name: 'ex403',
-          component: () => import('../views/noauth/403.vue')
-        }
-      ]
-    },
 
+
+  {
+    path: '/403',
+    name: 'unauthorized',
+    component: () => import('../views/noauth/403.vue')
+  },
+  {
+    path: '/verify',
+    name: 'verify',
+    component: () => import('../views/noauth/verify.vue')
+  },
   {
     path: '/',
     name: 'Home',
-   component: () => import('../components/layout/dashpage.vue'),
+   component: () => import('../components/layout/basepage.vue'),
     //component: () => import('../views/auth/home.vue'),
 
     meta: {
@@ -118,49 +114,27 @@ const Loc_options = {
       },
       component:() => import('../views/auth/home.vue'),
 
-      children: [
-        {
-          path:"everyonehome",
-          name:"EveryUserHome",
-          meta: {
-            authority: "admin",
-          },
-          component: () => import('../views/auth/copyauthpage.vue')
+    //   children: [
+    //     {
+    //       path:"everyonehome",
+    //       name:"EveryUserHome",
+    //       meta: {
+    //         authority: "admin",
+    //       },
+    //       component: () => import('../views/auth/copyauthpage.vue')
 
-         }
-    ],
+    //      }
+    // ],
     },
-    {
-      path: 'homeprofile',
-      name: 'Homeprofile',
-      meta: {
-        authority: "admin",
-        
-      },
-      component: () => import('../components/layout/dashpage.vue'),
-
-      //component:() => import('../views/auth/copyauthpage.vue')
-
-      children: [
-        {
-          path:"recover",
-          name:"Recover",
-          meta: {
-            authority: "admin",
-          },
-          component: () => import('../views/auth/copyauthpage.vue')
-
-         }
-    ],
-    },
+    
     {
       path: 'depadmin',
-      name: 'DepartmentAdmin',
+      name: 'DepAdmin',
       meta: {
         authority: "admin",
         
       },
-      component: () => import('../components/layout/dashpage.vue'),
+      component: () => import('../components/layout/basepage.vue'),
 
       //component:() => import('../views/auth/copyauthpage.vue')
 
@@ -171,7 +145,7 @@ const Loc_options = {
           meta: {
             authority: "admin",
           },
-          component: () => import('../views/auth/copyauthpage.vue')
+          component: () => import('../views/auth/adminuserops.vue')
 
          },
         {
@@ -180,7 +154,7 @@ const Loc_options = {
           meta: {
             authority: "admin",
           },
-          component: () => import('../views/auth/copyauthpage.vue')
+          component: () => import('../views/auth/admineditapprove.vue')
 
          },
          {
@@ -189,7 +163,7 @@ const Loc_options = {
           meta: {
             authority: "admin",
           },
-          component: () => import('../views/auth/copyauthpage.vue')
+          component: () => import('../views/auth/adminnewapprove.vue')
 
          }
     ],
@@ -197,12 +171,12 @@ const Loc_options = {
 
     {
       path: 'depuser',
-      name: 'DepartmentUser',
+      name: 'DepUser',
       meta: {
         authority: "admin",
         
       },
-      component: () => import('../components/layout/dashpage.vue'),
+      component: () => import('../components/layout/basepage.vue'),
 
       //component:() => import('../views/auth/copyauthpage.vue')
 
@@ -213,7 +187,7 @@ const Loc_options = {
           meta: {
             authority: "admin",
           },
-          component: () => import('../views/auth/copyauthpage.vue')
+          component: () => import('../views/auth/depuserlive.vue')
 
          },
          {
@@ -222,7 +196,16 @@ const Loc_options = {
           meta: {
             authority: "admin",
           },
-          component: () => import('../views/auth/copyauthpage.vue')
+          component: () => import('../views/auth/depuseredits.vue')
+
+         },
+         {
+          path:"depusernew",
+          name:"DepUserNew",
+          meta: {
+            authority: "admin",
+          },
+          component: () => import('../views/auth/depusernew.vue')
 
          },
          {
@@ -231,11 +214,55 @@ const Loc_options = {
           meta: {
             authority: "admin",
           },
+          component: () => import('../views/auth/depusercreate.vue')
+
+         },
+
+    ],
+    },
+    {
+      path: 'homeprofile',
+      name: 'Homeprofile',
+      meta: {
+        invisible: true,
+        authority: "admin",
+        
+      },
+      component: () => import('../components/layout/basepage.vue'),
+
+      //component:() => import('../views/auth/copyauthpage.vue')
+
+      children: [
+        {
+          path:"recover",
+          name:"Recover",
+          meta: {
+            authority: "admin",
+          },
+          component: () => import('../views/auth/profilerecover.vue')
+
+         },
+         {
+          path:"request",
+          name:"Request",
+          meta: {
+            authority: "admin",
+          },
+          component: () => import('../views/auth/profilerequest.vue')
+
+         },
+         {
+          path:"logout",
+          name:"Logout",
+          meta: {
+            authority: "admin",
+          },
           component: () => import('../views/auth/copyauthpage.vue')
 
-         }
+         },
+
     ],
-    }
+    },
   ]
   },
 

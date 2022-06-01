@@ -19,22 +19,22 @@
 // const SELLERID = "jH54rbKmeuuoMfLZWb79KK"
 
 const BASE_URL = `http://localhost:8000/api`
-const LOGIN_BASE =`https://auth.dealstagingapplication.ga/auth`
-const IMG_BASE = `https://files.dealstagingapplication.ga/files/img?path=`
+//const LOGIN_BASE =`https://auth.dealstagingapplication.ga/auth`
+//const IMG_BASE = `https://files.dealstagingapplication.ga/files/img?path=`
 
 
 
 module.exports = {
-  IMG_BASE,
+ // IMG_BASE,
 
-  LOGIN: `${LOGIN_BASE}/login`,
+  //LOGIN: `${LOGIN_BASE}/login`,
   VERIFY: `${BASE_URL}/verify`,
-  REGISTER:`${LOGIN_BASE}/register`,
-  LOGOUT : `${LOGIN_BASE}/logout`,
+  //REGISTER:`${LOGIN_BASE}/register`,
+  //LOGOUT : `${LOGIN_BASE}/logout`,
 
   //ROUTES: `${BASE_URL}/routes`,
   
-  USER_INFO: `${BASE_URL}/auth/account/client/get-info`,
-  LOCALSIGNUP: `${BASE_URL}/auth/account/client/signup`,
+  //USER_INFO: `${BASE_URL}/auth/account/client/get-info`,
+  //LOCALSIGNUP: `${BASE_URL}/auth/account/client/signup`,
   
 }

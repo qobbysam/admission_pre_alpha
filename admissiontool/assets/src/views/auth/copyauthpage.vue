@@ -1,15 +1,42 @@
 <template>
-  <dashpage-vue>
-      <h2> Copy Auth  page is showing</h2>
-  </dashpage-vue>
+
+<dashchild>
+<template #dashchildslot>
+  <v-container>
+    <v-row>
+      <v-col
+      >
+
+
+        <h2>Copy auth page is showing</h2>
+        
+      </v-col>
+
+      
+    </v-row>
+  </v-container>
+
+
+</template>
+     </dashchild>
+
 </template>
 
 <script>
+import Dashchild from '../../components/layout/dashchild.vue';
 
-import dashpageVue from '../../components/layout/dashpage.vue'
+
+
+
+//import func from 'vue-editor-bridge'
 export default {
-    name: 'copyauthpage',
-  components: { dashpageVue, },
+    name: "copyauthpage",
+  components: {  Dashchild },
+
+  methods: {
+  },
+
+  
 
 }
 </script>

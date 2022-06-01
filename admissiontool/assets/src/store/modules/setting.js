@@ -21,6 +21,7 @@ export default {
     customTitles,
     asyncRoutes: false,
     filterMenu: true,
+    menuon:null,
     // ...config,
     // ...localSetting
     layout: 'side',
@@ -51,6 +52,9 @@ export default {
       }
       const current = menuData.find(menu => menu.fullPath === activatedFirst)
       return current && current.children || []
+    },
+    menuState(state) {
+      return state.menuon
     }
   },
   mutations: {
